@@ -1,6 +1,5 @@
-let tied = 0;
-let won = 0;
-let lost = 0;
+let playerScore = 0;
+let computerScore = 0;
 
 let results = ['This is the result'];
 
@@ -14,6 +13,14 @@ scissorsButton.addEventListener('click', () => playGameScissors());
 
 const choices = ['rock', 'paper', 'scissors'];
 
+let updateScore = () => {
+    const playerScorePara = document.getElementById('playerScore');
+    const computerScorePara = document.getElementById('computerScore');
+
+    playerScorePara.textContent = `Player: ${playerScore}`;
+    computerScorePara.textContent = `Computer: ${computerScore}`;
+}
+
 let getComputerChoice = () => {
     let randNum = Math.floor(Math.random() * choices.length);
     
@@ -24,9 +31,9 @@ let playGameRock = () => {
     let computerChoice = getComputerChoice();
     let playerChoice = 'rock'
 
-    if (computerChoice == playerChoice) {tied ++; console.log(`The computer threw ${computerChoice}, it is a tie.`)}
-    if (computerChoice == 'scissors') { won++; console.log(`The computer threw ${computerChoice}, you won!.`) }
-    if (computerChoice == 'paper') { lost++; console.log(`The computer threw ${computerChoice}, you lose.`)}
+    if (computerChoice == playerChoice) {console.log(`The computer threw ${computerChoice}, it is a tie.`)}
+    if (computerChoice == 'scissors') { playerScore++; console.log(`The computer threw ${computerChoice}, you playerScore!.`); updateScore(); }
+    if (computerChoice == 'paper') { computerScore++; console.log(`The computer threw ${computerChoice}, you lose.`); updateScore();}
     
 }
 
@@ -34,9 +41,9 @@ let playGamePaper = () => {
     let computerChoice = getComputerChoice();
     let playerChoice = 'paper'
 
-    if (computerChoice == playerChoice) {tied ++; console.log(`The computer threw ${computerChoice}, it is a tie.`)}
-    if (computerChoice == 'rock') { won++; console.log(`The computer threw ${computerChoice}, you won!.`)}
-    if (computerChoice == 'scissors') { lost++; console.log(`The computer threw ${computerChoice}, you lose.`)}
+    if (computerChoice == playerChoice) {console.log(`The computer threw ${computerChoice}, it is a tie.`)}
+    if (computerChoice == 'rock') { playerScore++; console.log(`The computer threw ${computerChoice}, you playerScore!.`); updateScore();}
+    if (computerChoice == 'scissors') { computerScore++; console.log(`The computer threw ${computerChoice}, you lose.`); updateScore();}
     
 }
 
@@ -44,9 +51,11 @@ let playGameScissors = () => {
     let computerChoice = getComputerChoice();
     let playerChoice = 'scissors'
 
-    if (computerChoice == playerChoice) {tied ++; console.log(`The computer threw ${computerChoice}, it is a tie.`)}
-    if (computerChoice == 'paper') { won++; console.log(`The computer threw ${computerChoice}, you won!.`)}
-    if (computerChoice == 'rock') { lost++; console.log(`The computer threw ${computerChoice}, you lose.`)}
+    if (computerChoice == playerChoice) {console.log(`The computer threw ${computerChoice}, it is a tie.`)}
+    if (computerChoice == 'paper') { playerScore++; console.log(`The computer threw ${computerChoice}, you playerScore!.`); updateScore();}
+    if (computerChoice == 'rock') { computerScore++; console.log(`The computer threw ${computerChoice}, you lose.`); updateScore();}
     
 }
+
+
 
