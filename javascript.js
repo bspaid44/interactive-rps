@@ -41,7 +41,7 @@ let updateResults = (phrase) => {
     resultsPara.textContent = phrase;
 }
 
-// Game Logic - Seperated into the three different game button events; Will increment the score variable by won if the case is true, and update the results and score displays for the user
+// Game Logic - Seperated into the three different game button events; Will increment the score variable by one if the case is true, and update the results and score displays for the user
 let playGameRock = () => {
     let computerChoice = getComputerChoice();
     let playerChoice = 'rock'
