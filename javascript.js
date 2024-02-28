@@ -26,7 +26,7 @@ let updateScore = () => {
 let updateResults = (phrase) => {
     const resultsPara = document.getElementById('results');
 
-    resultsPara.textContent = 'Results: ' + phrase;
+    resultsPara.textContent = phrase;
 }
 
 let getComputerChoice = () => {
