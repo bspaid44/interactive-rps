@@ -1,0 +1,23 @@
+body {
+    background-color: pink;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: center;
+}
+
+.result {
+    display: flex;
+    justify-content: center;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+}
