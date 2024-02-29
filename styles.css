@@ -1,5 +1,5 @@
 body {
-    background-color: #ffc0cb;
+    background-color: black;
     display: flex;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
@@ -69,6 +69,7 @@ body {
 
 .main-content {
     border: 2px solid black;
+    background-color: #ffc0cb;
     width: 50%;
     display: flex;
     flex-direction: column;
