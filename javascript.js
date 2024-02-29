@@ -72,6 +72,7 @@ let playGameScissors = () => {
     
 }
 
+// Reset score and results to their respective starting values
 let resetScore = () => {
     playerScore = 0;
     computerScore = 0;
