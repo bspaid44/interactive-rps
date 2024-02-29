@@ -47,7 +47,7 @@ let playGameRock = () => {
     let playerChoice = 'rock'
 
     if (computerChoice == playerChoice) {drawScore++; updateResults(`The computer threw ${computerChoice}, it is a tie.`); updateScore();}
-    if (computerChoice == 'scissors') { playerScore++; updateResults(`The computer threw ${computerChoice}, you won!.`); updateScore(); }
+    if (computerChoice == 'scissors') { playerScore++; updateResults(`The computer threw ${computerChoice}, you won!`); updateScore(); }
     if (computerChoice == 'paper') { computerScore++; updateResults(`The computer threw ${computerChoice}, you lose.`); updateScore();}
     
 }
@@ -57,7 +57,7 @@ let playGamePaper = () => {
     let playerChoice = 'paper'
 
     if (computerChoice == playerChoice) {drawScore++; updateResults(`The computer threw ${computerChoice}, it is a tie.`); updateScore();}
-    if (computerChoice == 'rock') { playerScore++; updateResults(`The computer threw ${computerChoice}, you won!.`); updateScore();}
+    if (computerChoice == 'rock') { playerScore++; updateResults(`The computer threw ${computerChoice}, you won!`); updateScore();}
     if (computerChoice == 'scissors') { computerScore++; updateResults(`The computer threw ${computerChoice}, you lose.`); updateScore();}
     
 }
@@ -67,7 +67,7 @@ let playGameScissors = () => {
     let playerChoice = 'scissors'
 
     if (computerChoice == playerChoice) {drawScore++; updateResults(`The computer threw ${computerChoice}, it is a tie.`); updateScore();}
-    if (computerChoice == 'paper') { playerScore++; updateResults(`The computer threw ${computerChoice}, you won!.`); updateScore();}
+    if (computerChoice == 'paper') { playerScore++; updateResults(`The computer threw ${computerChoice}, you won!`); updateScore();}
     if (computerChoice == 'rock') { computerScore++; updateResults(`The computer threw ${computerChoice}, you lose.`); updateScore();}
     
 }
