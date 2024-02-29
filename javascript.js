@@ -72,5 +72,11 @@ let playGameScissors = () => {
     
 }
 
-
+let resetScore = () => {
+    playerScore = 0;
+    computerScore = 0;
+    drawScore = 0;
+    updateResults('');
+    updateScore();
+}
 
